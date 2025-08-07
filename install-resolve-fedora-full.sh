@@ -30,6 +30,9 @@ sudo dnf install -y \
     qt5-qtwayland qt5-qtbase-gui qt5-qtbase-common \
     unzip
 
+# After adding these, the splash screen could run after install, but the app then crashed 
+sudo dnf install libxcrypt-compat libcurl libcurl-devel mesa-libGLU --allowerasing
+
 # Optional: Install GPU dependencies (NVIDIA/CUDA or AMD/OpenCL)
 #echo "Installing optional GPU support libraries (CUDA/OpenCL)..."
 #sudo dnf install -y ocl-icd opencl-headers mesa-libOpenCL --allowerasing
